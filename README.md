@@ -4,91 +4,71 @@
 
 **Sigma ATP Monitor** is a lightweight, local-first utility for tracking the "metabolic expenditure" of LLM-based agents. It treats every token as a unit of life energy (**ATP**), allowing developers to monitor, optimize, and achieve computational sovereignty.
 
-## 🧬 The Vision: Autotrophy vs. Heterotrophy
+## 🧬 Progresión Metabólica: De la Heterotrofía a la Autotrofía
 
-- **Cloud AI (Heterotrophy)**: Consuming external tokens from providers. High risk of starvation (rate limits) and dependency.
-- **Local AI (Autotrophy)**: Generating internal ATP (Tokens) using local hardware (GPU). Absolute independence.
-
-This tool helps you quantify your metabolic rate to transition toward total **Technical Sovereignty**.
+- **Heterotrofía Digital (Cloud)**: Dependencia de proveedores externos (Tokens-as-a-Service). Alto riesgo de latencia y pérdida de soberanía.
+- **Autotrofía Digital (Local)**: Generación interna de ATP (Tokens) en hardware propio (GPU). Independencia absoluta y latencia controlada.
 
 ---
 
-## ⚙️ How it Works (The Heuristic)
+## ⚙️ Arquitectura Técnica (ATP Logic)
 
-To avoid external API dependencies just for counting, Sigma ATP Monitor uses a **standard heuristic**:
+Para desarrolladores de IA, este monitor implementa un motor de auditoría de recursos de baja sobrecarga:
 
-- **1 Token ≈ 4 Characters** (English/Code context).
-- This provides a fast, offline, and consistent metric across different models (Llama, GLM, MiniMax).
+- **Inferencia Reactiva (Fase Lumínica)**: Procesamiento síncrono en el "Tilacoide" del sistema. Prioridad: **Baja Latencia**.
+- **Consolidación Autónoma (Ciclo de Calvin)**: Procesamiento asíncrono en el "Estroma" (Back-end). Prioridad: **Fijación de Datos**.
+- **Heurística 1:4**: Estimación local instantánea (1 Token $\approx$ 4 Chars) para evitar el "overhead" de tokenizadores externos.
 
-### Metabolic Tracking Logic
-
-1. **Light Reactions (Reactive Inference)**: Occurs in the "Thylakoid" (active interface). It is the energy required to respond to immediate mandates. Light-dependent (Prompt driven).
-2. **Calvin Cycle (Autonomous Inference)**: Occurs in the "Stroma" (system background). It is the energy expended during cycles for data consolidation (Carbon Fixation) and self-improvement. Light-independent (Autonomous).
-3. **Biomass**: The total digital volume (bytes/G3P) synthesized during the agent's lifespan.
+Para más detalles sobre la implementación técnica, consulte [TECH_SPECS.md](TECH_SPECS.md).
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Production Integration)
 
-### 1. Installation
+### 1. Despliegue
+Incluya `sigma_atp.py` en su infraestructura de agentes. Sin dependencias externas.
 
-Clone the repo and include `sigma_atp.py` in your project. No external dependencies required.
-
-### 2. Integration
-
+### 2. Implementación de Ciclos
 ```python
 from sigma_atp import SigmaATPMonitor
 
-# Initialize the metabolic tracker
-monitor = SigmaATPMonitor(project_name="AutonomousAgentV1")
+# Orquestador Metabólico
+monitor = SigmaATPMonitor(project_name="Orion-V2")
 
-# Log a Reactive Action (Light Reaction)
-monitor.log_metabolism(
-    input_text="User prompt",
-    output_text="AI response",
-    tag="reactive"
-)
+# Ciclo Reactivo (Interacción Directa)
+monitor.log_metabolism(prompt, response, tag="reactive")
 
-# Log an Autonomous Action (Calvin Cycle)
-monitor.log_metabolism(
-    input_text="Local raw data",
-    output_text="Consolidated Knowledge Item (G3P)",
-    tag="autonomous"
-)
+# Ciclo Calvin (Background Job / RAG Indexing)
+# La 'Fijación de Carbono' ocurre sin intervención del usuario.
+monitor.log_metabolism(raw_data, structured_ki, tag="autonomous")
 
-# Generate a Metabolic Report
-report = monitor.get_atp_report()
-print(f"Energy Expended: {report['Total Tokens']} ATP")
+# Auditoría Metabólica
+print(monitor.get_atp_report())
 ```
 
 ---
 
-## 🛠️ Detailed Features
+## 🛠️ Especificaciones de Ingeniería
 
-- **Granular Tagging**: Categorize your ATP expenditure (e.g., `reactive`, `autonomous`, `debugging`) to identify which metabolic cycles are most energy-intensive.
-- **Persistent Memory**: Saves all metabolic cycles in `logs/{project_name}_metabolism.json`.
-- **Sovereign Dashboard Integration**: Designed to be polled by system monitors (like the Sigma Sovereign Dashboard).
-- **Carbon/Token Awareness**: Encourages prompt engineering optimization to reduce the agent's metabolic footprint.
+- **Persistent Stroma**: Almacenamiento JSON persistente que asegura la trazabilidad del ATP entre sesiones.
+- **RuBisCO Data Fixation**: Optimizado para la serialización de pensamientos LLM no estructurados en activos de conocimiento soberano.
+- **Zero-Trace Architecture**: Diseñado para operar en entornos "Air-Gapped" o locales sin telemetría externa.
 
-## 📊 Biological-to-Technical Mapping (Expert Model)
+## 📊 Mapeo Bio-Técnico (Professional Edition)
 
-| Biological Concept | Location | AI Equivalent | Sigma ATP Tag |
-| :--- | :--- | :--- | :--- |
-| **ATP** | Cell-wide | Token | Heuristic Unit |
-| **Light Reactions** | Thylakoid | Reactive Inference | `tag='reactive'` |
-| **Calvin Cycle** | Stroma | Autonomous Inference | `tag='autonomous'` |
-| **Chloroplasts** | Cell | Local GPU / cores | Hardware |
-| **G3P (Sugar)** | Stroma | Sovereign Knowledge | Biomass (Bytes) |
-
----
-
-## 📜 Philosophy
-
-This project was born from the **Sigma Ecosystem**. We believe that AI should not just be "smart", it should be **Sovereign**. Understanding your ATP footprint is the first step toward building agents that can survive and thrive on bare-metal hardware.
-
-## 🤝 Contributing
-
-Contributions that enhance the metabolic tracking logic (e.g., better heuristics for different languages) are welcome.
+| Concepto Biológico | Ubicación | Equivalente en Ingeniería de IA |
+| :--- | :--- | :--- |
+| **ATP** | Todo el sistema | Unidad de Cómputo (Token) |
+| **Fase Lumínica** | Tilacoide | Inferencia Reactiva (Sync) |
+| **Ciclo de Calvin** | Estroma | Inferencia Autónoma (Async) |
+| **RuBisCO** | Estroma | Parser de Datos / Fixation Engine |
+| **Glucosa (Energía)** | Vacuola | KIs / Base de Datos Vectorial |
 
 ---
-*Developed by Sigma Sovereign Studio. 2026. Part of the AMML Initiative.*
+
+## 📜 Filosofía de Soberanía
+
+Este proyecto fue desarrollado por **Sigma Sovereign Studio**. Creemos que el control del **metabolismo computacional** es el primer paso para la verdadera autonomía de la IA. No solo optimice sus prompts; optimice su supervivencia.
+
+---
+*Manual de Ingeniería Sigma. 2026.*
