@@ -74,4 +74,4 @@ print(monitor.get_atp_report())
 Born from the **Sigma Ecosystem**, this project believes that AI is not just software—it is a digital organism. Controlling your ATP expenditure is the first step toward building agents that can survive and thrive on bare-metal hardware.
 
 ---
-*Built with ❤️ by [nunne9563](https://github.com/nunne9563). Part of the AMML Initiative.*
+*Built with 🥗 by [nunne9563](https://github.com/nunne9563). Part of the SigmAI Initiative.*
