@@ -1,6 +1,6 @@
 # ⚛️ Sigma ATP Monitor: Sovereign AI Resource Tracking
 
-> "Tokens are the ATP of the digital organism." — Felipe Ojeda
+> "Tokens are the ATP of the digital organism." — nunne9563
 
 **Sigma ATP Monitor** is a lightweight, local-first utility for tracking the "metabolic expenditure" of LLM-based agents. It treats every token as a unit of life energy (**ATP**), allowing developers to monitor, optimize, and achieve computational sovereignty.
 
