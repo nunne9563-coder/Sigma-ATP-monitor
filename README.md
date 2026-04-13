@@ -1,74 +1,77 @@
-# ⚛️ Sigma ATP Monitor: Sovereign AI Resource Tracking
+<div align="center">
+  <img src="assets/header.png" alt="Sigma ATP Monitor Header" width="100%">
+  
+  # Sigma ATP Monitor
+  
+  **The Sovereign AI Metabolism Tracker built by nunne9563.**
+  
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/)
+  [![Sovereignty](https://img.shields.io/badge/Sovereignty-Absolute-orange.svg)](https://github.com/nunne9563/sigma-atp-monitor)
+  [![Efficiency](https://img.shields.io/badge/Efficiency-ATP--Aware-green.svg)](TECH_SPECS.md)
 
-> "Tokens are the ATP of the digital organism." — nunne9563
+</div>
 
 **Sigma ATP Monitor** is a lightweight, local-first utility for tracking the "metabolic expenditure" of LLM-based agents. It treats every token as a unit of life energy (**ATP**), allowing developers to monitor, optimize, and achieve computational sovereignty.
 
-## 🧬 Progresión Metabólica: De la Heterotrofía a la Autotrofía
-
-- **Heterotrofía Digital (Cloud)**: Dependencia de proveedores externos (Tokens-as-a-Service). Alto riesgo de latencia y pérdida de soberanía.
-- **Autotrofía Digital (Local)**: Generación interna de ATP (Tokens) en hardware propio (GPU). Independencia absoluta y latencia controlada.
+It is the only agent-agnostic tracker with a built-in **Autotrophy vs Heterotrophy** awareness loop.
 
 ---
 
-## ⚙️ Arquitectura Técnica (ATP Logic)
+## 🧬 The Vision
 
-Para desarrolladores de IA, este monitor implementa un motor de auditoría de recursos de baja sobrecarga:
+- **Cloud AI (Heterotrophy)**: High dependency, rate-limited tokens, and external data extraction.
+- **Local AI (Autotrophy)**: 100% sovereign ATP generation via local hardware (GPU/NPU).
 
-- **Inferencia Reactiva (Fase Lumínica)**: Procesamiento síncrono en el "Tilacoide" del sistema. Prioridad: **Baja Latencia**.
-- **Consolidación Autónoma (Ciclo de Calvin)**: Procesamiento asíncrono en el "Estroma" (Back-end). Prioridad: **Fijación de Datos**.
-- **Heurística 1:4**: Estimación local instantánea (1 Token $\approx$ 4 Chars) para evitar el "overhead" de tokenizadores externos.
+## 🚀 Quick Start
 
-Para más detalles sobre la implementación técnica, consulte [TECH_SPECS.md](TECH_SPECS.md).
+### 1. Installation
 
----
+```bash
+git clone https://github.com/nunne9563/sigma-atp-monitor.git
+```
 
-## 🚀 Quick Start (Production Integration)
+### 2. Implementation
 
-### 1. Despliegue
-Incluya `sigma_atp.py` en su infraestructura de agentes. Sin dependencias externas.
-
-### 2. Implementación de Ciclos
 ```python
 from sigma_atp import SigmaATPMonitor
 
-# Orquestador Metabólico
-monitor = SigmaATPMonitor(project_name="Orion-V2")
+# Initialize the metabolic tracker
+monitor = SigmaATPMonitor(project_name="Orion-Agent")
 
-# Ciclo Reactivo (Interacción Directa)
+# Log Reactive Inference (Light Reactions)
 monitor.log_metabolism(prompt, response, tag="reactive")
 
-# Ciclo Calvin (Background Job / RAG Indexing)
-# La 'Fijación de Carbono' ocurre sin intervención del usuario.
+# Log Autonomous Consolidation (Calvin Cycle)
 monitor.log_metabolism(raw_data, structured_ki, tag="autonomous")
 
-# Auditoría Metabólica
+# Metabolic Audit
 print(monitor.get_atp_report())
 ```
 
 ---
 
-## 🛠️ Especificaciones de Ingeniería
+## 🛠️ Features
 
-- **Persistent Stroma**: Almacenamiento JSON persistente que asegura la trazabilidad del ATP entre sesiones.
-- **RuBisCO Data Fixation**: Optimizado para la serialización de pensamientos LLM no estructurados en activos de conocimiento soberano.
-- **Zero-Trace Architecture**: Diseñado para operar en entornos "Air-Gapped" o locales sin telemetría externa.
+- **Heuristic Character-to-Token (CTH)**: Fast, offline estimation (1 Token ≈ 4 Chars). No API dependencies.
+- **Thylakoid/Stroma Mapping**: Distinguish between reactive inference and background autonomous processing.
+- **RuBisCO Data Fixation**: Measure the efficiency of structured output persistence.
+- **Zero-Trace Architecture**: Designed for air-gapped systems and private local stacks (Ollama, vLLM, LM Studio).
 
-## 📊 Mapeo Bio-Técnico (Professional Edition)
+## 📊 Biological-to-Technical Mapping
 
-| Concepto Biológico | Ubicación | Equivalente en Ingeniería de IA |
+| Concept | Location | Equivalent in Engineering |
 | :--- | :--- | :--- |
-| **ATP** | Todo el sistema | Unidad de Cómputo (Token) |
-| **Fase Lumínica** | Tilacoide | Inferencia Reactiva (Sync) |
-| **Ciclo de Calvin** | Estroma | Inferencia Autónoma (Async) |
-| **RuBisCO** | Estroma | Parser de Datos / Fixation Engine |
-| **Glucosa (Energía)** | Vacuola | KIs / Base de Datos Vectorial |
+| **ATP** | Cell | Compute Token Unit |
+| **Light Reactions** | Thylakoid | Reactive Inference (Sync) |
+| **Calvin Cycle** | Stroma | Autonomous Processing (Async) |
+| **G3P (Sugar)** | Stroma | Persistent Knowledge / Artifacts |
 
 ---
 
-## 📜 Filosofía de Soberanía
+## 📜 Philosophy
 
-Este proyecto fue desarrollado por **Sigma Sovereign Studio**. Creemos que el control del **metabolismo computacional** es el primer paso para la verdadera autonomía de la IA. No solo optimice sus prompts; optimice su supervivencia.
+Born from the **Sigma Ecosystem**, this project believes that AI is not just software—it is a digital organism. Controlling your ATP expenditure is the first step toward building agents that can survive and thrive on bare-metal hardware.
 
 ---
-*Manual de Ingeniería Sigma. 2026.*
+*Built with ❤️ by [nunne9563](https://github.com/nunne9563). Part of the AMML Initiative.*
