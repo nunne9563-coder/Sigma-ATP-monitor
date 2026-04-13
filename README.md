@@ -22,9 +22,9 @@ To avoid external API dependencies just for counting, Sigma ATP Monitor uses a *
 
 ### Metabolic Tracking Logic
 
-1. **Light Reactions (Reactive Inference)**: The energy required to respond to immediate mandates. Light-dependent (Prompt driven).
-2. **Calvin Cycle (Autonomous Inference)**: The energy expended during background cycles for data consolidation and self-improvement. Light-independent (Autonomous).
-3. **Biomass**: The total digital volume (bytes) produced during the agent's lifespan.
+1. **Light Reactions (Reactive Inference)**: Occurs in the "Thylakoid" (active interface). It is the energy required to respond to immediate mandates. Light-dependent (Prompt driven).
+2. **Calvin Cycle (Autonomous Inference)**: Occurs in the "Stroma" (system background). It is the energy expended during cycles for data consolidation (Carbon Fixation) and self-improvement. Light-independent (Autonomous).
+3. **Biomass**: The total digital volume (bytes/G3P) synthesized during the agent's lifespan.
 
 ---
 
@@ -52,7 +52,7 @@ monitor.log_metabolism(
 # Log an Autonomous Action (Calvin Cycle)
 monitor.log_metabolism(
     input_text="Local raw data",
-    output_text="Consolidated KI",
+    output_text="Consolidated Knowledge Item (G3P)",
     tag="autonomous"
 )
 
@@ -70,15 +70,15 @@ print(f"Energy Expended: {report['Total Tokens']} ATP")
 - **Sovereign Dashboard Integration**: Designed to be polled by system monitors (like the Sigma Sovereign Dashboard).
 - **Carbon/Token Awareness**: Encourages prompt engineering optimization to reduce the agent's metabolic footprint.
 
-## 📊 Biological-to-Technical Mapping
+## 📊 Biological-to-Technical Mapping (Expert Model)
 
-| Biological Concept | AI Equivalent | Sigma ATP Implementation |
-| :--- | :--- | :--- |
-| **ATP** | Token | Heuristic Unit (1:4 char) |
-| **Light Reactions** | Reactive Inference | `log_metabolism(tag='reactive')` |
-| **Calvin Cycle (Dark)** | Autonomous Inference | `log_metabolism(tag='autonomous')` |
-| **Chloroplasts** | Local GPU / cores | CUDA/Ryzen Hardware |
-| **Glucose / Starch** | Persistent Artifacts | Long-term sovereign knowledge |
+| Biological Concept | Location | AI Equivalent | Sigma ATP Tag |
+| :--- | :--- | :--- | :--- |
+| **ATP** | Cell-wide | Token | Heuristic Unit |
+| **Light Reactions** | Thylakoid | Reactive Inference | `tag='reactive'` |
+| **Calvin Cycle** | Stroma | Autonomous Inference | `tag='autonomous'` |
+| **Chloroplasts** | Cell | Local GPU / cores | Hardware |
+| **G3P (Sugar)** | Stroma | Sovereign Knowledge | Biomass (Bytes) |
 
 ---
 
